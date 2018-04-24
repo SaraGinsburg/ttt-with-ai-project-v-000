@@ -44,6 +44,7 @@ class Game
    end
 
    def turn
+     board.display
      pos = current_player.move(board)
      until board.valid_move?(pos)
        pos = current_player.move(board)
@@ -61,6 +62,6 @@ class Game
      else
        puts "Cat's Game!"
      end
-     
+
    end
 end
